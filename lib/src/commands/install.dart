@@ -25,38 +25,22 @@ class InstallCommand extends Command {
     final isGlobal = args['global'] == true;
 
     if (packageName == null) {
-      print('❌ Error: Package name is required');
+      print('Error: Package name is required');
       print('Usage: i [-g] <package_name>');
       return;
     }
 
-    try {
-      if (isGlobal) {
-        print('🌍 Installing $packageName globally...');
-        final result = await Process.run('dart', ['pub', 'global', 'activate', packageName]);
-        if (result.exitCode != 0) {
-          throw Exception('Global activation failed');
-        }
-        print('✅ Successfully installed $packageName globally');
-      } else {
-        print('📦 Installing $packageName locally...');
-        final pubspec = await getLocalPubspec();
-        ProcessResult result;
-        if (pubspec.dependencies.containsKey('flutter')) {
-          var shell = Shell();
-          final results = await shell.run('flutter pub add $packageName');
-          result = results.first;
-        } else {
-          result = await Process.run('dart', ['pub', 'add', packageName], runInShell: true);
-        }
+    final shell = Shell();
 
-        if (result.exitCode != 0) {
-          throw Exception('Local installation failed');
-        }
-        print('✅ Successfully installed $packageName locally');
+    if (isGlobal) {
+      await shell.run('dart pub global activate $packageName');
+    } else {
+      final pubspec = await getLocalPubspec();
+      if (pubspec.dependencies.containsKey('flutter')) {
+        await shell.run('flutter pub add $packageName');
+      } else {
+        await shell.run('dart pub add $packageName');
       }
-    } catch (e) {
-      print('❌ Installation failed: $e');
     }
   }
 }

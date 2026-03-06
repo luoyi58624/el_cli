@@ -28,34 +28,17 @@ class RemoveCommand extends Command {
       return;
     }
 
-    try {
-      if (isGlobal) {
-        print('🌍 Removing $packageName globally...');
-        final result = await Process.run('dart', ['pub', 'global', 'deactivate', packageName]);
-        if (result.exitCode != 0) {
-          throw Exception('Global activation failed');
-        }
-        print('✅ Successfully remove $packageName globally');
+    final shell = Shell();
+
+    if (isGlobal) {
+      await shell.run('dart pub global deactivate $packageName');
+    } else {
+      final pubspec = await getLocalPubspec();
+      if (pubspec.dependencies.containsKey('flutter')) {
+        await shell.run('flutter pub remove $packageName');
       } else {
-        print('📦 Removing $packageName locally...');
-        final pubspec = await getLocalPubspec();
-        ProcessResult result;
-
-        if (pubspec.dependencies.containsKey('flutter')) {
-          var shell = Shell();
-          final results = await shell.run('flutter pub remove $packageName');
-          result = results.first;
-        } else {
-          result = await Process.run('dart', ['pub', 'remove', packageName]);
-        }
-
-        if (result.exitCode != 0) {
-          throw Exception('Local remove failed');
-        }
-        print('✅ Successfully remove $packageName locally');
+        await shell.run('dart pub remove $packageName');
       }
-    } catch (e) {
-      print('❌ Installation failed: $e');
     }
   }
 }
