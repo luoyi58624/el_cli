@@ -17,6 +17,10 @@ dependencies:
 
 dev_dependencies:
   lints: ^6.1.0
+  melos: ^7.4.0
+
+melos:
+  useRootAsPackage: true
 
 executables:
   el:
