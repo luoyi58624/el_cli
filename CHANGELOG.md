@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`el_cli` - `v0.0.14`](#el_cli---v0014)
+
+---
+
+#### `el_cli` - `v0.0.14`
+
+ - **FEAT**: 更新脚本.
+
+## 0.0.14
+
+ - **FEAT**: 更新脚本.
+
+
+## 2026-03-06
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`el_cli` - `v0.0.13+1`](#el_cli---v00131)
 
 ---
