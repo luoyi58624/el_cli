@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`el_cli` - `v0.0.15`](#el_cli---v0015)
+
+---
+
+#### `el_cli` - `v0.0.15`
+
+ - **FEAT**: 使用 process_run 运行脚本.
+
+## 0.0.15
+
+ - **FEAT**: 使用 process_run 运行脚本.
+
+
+## 2026-03-06
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`el_cli` - `v0.0.14`](#el_cli---v0014)
 
 ---
