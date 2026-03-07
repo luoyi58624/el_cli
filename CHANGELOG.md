@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-03-07
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`el_cli` - `v0.0.16`](#el_cli---v0016)
+
+---
+
+#### `el_cli` - `v0.0.16`
+
+ - **FEAT**: ++.
+
+## 0.0.16
+
+ - **FEAT**: ++.
+
+
 ## 2026-03-06
 
 ### Changes
