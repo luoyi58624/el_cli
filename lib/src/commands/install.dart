@@ -1,9 +1,4 @@
-import 'dart:io';
-
 import 'package:args/command_runner.dart';
-import 'package:process_run/process_run.dart';
-import 'package:pubspec_parse/pubspec_parse.dart';
-import 'package:yaml/yaml.dart';
 
 import '../utils/common.dart';
 
@@ -29,8 +24,6 @@ class InstallCommand extends Command {
       print('Usage: i [-g] <package_name>');
       return;
     }
-
-    final shell = Shell();
 
     if (isGlobal) {
       await shell.run('dart pub global activate $packageName');

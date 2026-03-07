@@ -1,7 +1,7 @@
 import 'package:args/command_runner.dart';
 import 'package:el_cli/el_cli.dart';
 
-Future<void> main(List<String> arguments) async {
+Future<void> main(List<String> args) async {
   final runner = CommandRunner('el', 'Command-line tool for El framework')
     ..addCommand(CreateCommand())
     ..addCommand(InstallCommand())
@@ -10,7 +10,7 @@ Future<void> main(List<String> arguments) async {
     ..addCommand(VersionCommand());
 
   try {
-    await runner.run(arguments);
+    await runner.run(args);
   } catch (e) {
     print('Error: $e');
   }

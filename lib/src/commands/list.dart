@@ -9,10 +9,6 @@ class ListCommand extends Command {
   @override
   final description = 'List the global packages';
 
-  ListCommand() {
-    argParser.addFlag('global', abbr: 'g', help: 'Install global package', negatable: false, defaultsTo: true);
-  }
-
   @override
   Future<void> run() async {
     // 获取全局包目录
