@@ -1,4 +1,9 @@
-part of 'index.dart';
+import 'dart:io';
+
+import 'package:dart_console/dart_console.dart';
+import 'package:io/ansi.dart';
+
+import 'prompt.dart';
 
 class Choice {
   const Choice({required this.name, required this.value, this.description, this.disabled = false});
@@ -9,18 +14,10 @@ class Choice {
   final bool disabled;
 }
 
-/// 选择一组内容对话框
 class Select extends Prompt<int> {
-  Select(super.message, {super.required, super.validate, required this.choices, this.defaultValue}) {
-    ask();
-    final result = readNowrap();
-    if (result != null) {
-      confim();
-    } else {}
-  }
+  Select(super.message, {super.required, super.validate, required this.children, super.defaultValue});
 
-  final List<Choice> choices;
-  final String? defaultValue;
+  final List<Choice> children;
 
   @override
   int build() {

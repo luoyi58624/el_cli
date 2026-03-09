@@ -1,25 +1,21 @@
-part of 'index.dart';
+import 'dart:io';
 
-/// 确认对话框
+import 'package:dart_console/dart_console.dart';
+import 'package:io/ansi.dart';
+
+import 'prompt.dart';
+
 class Confirm extends Prompt<bool> {
-  Confirm(super.message, {this.defaultValue = false}) {
-    ask();
-    final result = readNowrap();
-    if (result != null) {
-      confim();
-    } else {}
-  }
-
-  final bool defaultValue;
+  Confirm(super.message, {super.defaultValue = false}) : assert(defaultValue != null);
 
   @override
-  String get message => '${super.message} ${defaultValue ? '(Y/n)' : '(y/N)'} ';
+  String get message => '${super.message} ${defaultValue! ? '(Y/n)' : '(y/N)'} ';
 
   @override
   bool build() {
-    final v = result!;
+    final v = result;
     if (v == 'y' || v == 'Y' || v.toLowerCase() == 'yes') return true;
     if (v == 'n' || v == 'N' || v.toLowerCase() == 'no') return false;
-    return defaultValue;
+    return defaultValue!;
   }
 }

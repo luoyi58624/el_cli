@@ -38,12 +38,14 @@ class CreateCommand extends Command {
     // stdout.writeln();
     // createDartBlockTemplate(projectName);
 
-    Input(
+    final result = Input(
       'Enter your name:',
+      defaultValue: 'luoyi',
       validate: (v) {
         return v!.length > 6 ? '名字长度最大为 6 个字符' : null;
       },
     ).build();
+
 
     // Confirm('是否要创建文件夹?');
 
@@ -51,7 +53,7 @@ class CreateCommand extends Command {
     // input(message: 'Enter your age:');
 
     // final result = getBool('你要创建新的文件夹吗?');
-    // print('结果：$result');
+    print('结果：$result');
 
     // 显示模板列表选项
     // _showTemplateList();
