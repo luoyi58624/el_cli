@@ -1,5 +1,5 @@
 import 'package:args/command_runner.dart';
-import 'package:el_cli/src/templates/dart_block.dart';
+import 'package:el_cli/el_cli.dart';
 
 class CreateCommand extends Command {
   @override
@@ -21,10 +21,36 @@ class CreateCommand extends Command {
       return;
     }
 
-    createDartBlockTemplate(projectName);
+    // console.writeLine();
+    // console.cursorPosition = Coordinate(console.cursorPosition!.row, 10);
+
+    // final oldCol = console.cursorPosition!.col;
+    // console.write(red.wrap('world') ?? 'world');
+    // console.cursorPosition = Coordinate(console.cursorPosition!.row, oldCol);
+    // console.eraseCursorToEnd();
+
+    // console.writeLine();
+    // stdout.writeln();
+    // console.write('xx');
+    // console.writeLine('xx');
+
+    // console.eraseLine();
+    // stdout.writeln();
+    // createDartBlockTemplate(projectName);
+
+    Input(
+      'Enter your name:',
+      validate: (v) {
+        return v!.length > 6 ? '名字长度最大为 6 个字符' : null;
+      },
+    ).build();
+
+    // Confirm('是否要创建文件夹?');
+
+    // input(message: 'Enter your name:');
+    // input(message: 'Enter your age:');
 
     // final result = getBool('你要创建新的文件夹吗?');
-    // print('结果: $result');
     // print('结果：$result');
 
     // 显示模板列表选项
