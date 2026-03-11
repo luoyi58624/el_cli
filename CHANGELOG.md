@@ -15,6 +15,32 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`el_cli` - `v0.0.20`](#el_cli---v0020)
+ - [`luoyi_dart_test` - `v2.5.0`](#luoyi_dart_test---v250)
+
+---
+
+#### `el_cli` - `v0.0.20`
+
+ - **FEAT**: ++.
+
+#### `luoyi_dart_test` - `v2.5.0`
+
+ - **FEAT**: ++.
+
+
+## 2026-03-11
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`luoyi_dart_test` - `v2.4.0`](#luoyi_dart_test---v240)
 
 ---
