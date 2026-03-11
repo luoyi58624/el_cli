@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`el_cli` - `v0.0.19`](#el_cli---v0019)
+
+---
+
+#### `el_cli` - `v0.0.19`
+
+ - **FEAT**: 添加 confirm 提示.
+
+
+## 2026-03-11
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`el_cli` - `v0.0.18+1`](#el_cli---v00181)
 
 ---
