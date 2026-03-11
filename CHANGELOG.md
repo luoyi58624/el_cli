@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`el_cli` - `v0.0.18`](#el_cli---v0018)
+
+---
+
+#### `el_cli` - `v0.0.18`
+
+ - **FEAT**: 切换 mono 仓库.
+
+
+## 2026-03-11
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`el_cli` - `v0.0.17`](#el_cli---v0017)
 
 ---
