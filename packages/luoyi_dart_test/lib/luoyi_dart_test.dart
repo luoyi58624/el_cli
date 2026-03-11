@@ -1,9 +1,13 @@
 library;
 
-void hello(){
+void hello() {
   print('hello');
 }
 
-void test(){
+void test() {
   print('test');
+}
+
+void demo() {
+  print('demo');
 }
