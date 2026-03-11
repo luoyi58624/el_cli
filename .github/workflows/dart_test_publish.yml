@@ -1,4 +1,4 @@
-name: Publish to pub.dev
+name: Publish dart_test to pub.dev
 
 on:
   push:
