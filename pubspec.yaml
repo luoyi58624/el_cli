@@ -1,6 +1,6 @@
 name: el_cli
 description: my command-line application
-version: 0.0.16
+version: 0.0.17
 repository: https://github.com/luoyi58624/el_cli
 
 environment:
