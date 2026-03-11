@@ -24,8 +24,8 @@ class Input extends Prompt {
   }
 
   @override
-  void confim() {
-    super.confim();
+  void confirm() {
+    super.confirm();
     stdout.write('$message ');
     final v = result.trim() == '' ? defaultValue?.toString() : result;
     if (v != null) stdout.writeln(cyan.wrap(v));

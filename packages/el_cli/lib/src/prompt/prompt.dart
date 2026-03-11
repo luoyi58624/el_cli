@@ -11,7 +11,7 @@ abstract class Prompt extends Console {
   Prompt(String message, {this.defaultValue, this.required = false, this.validate}) : _message = message {
     ask();
     listenKeyboard();
-    if (result != '' || defaultValue != null) confim();
+    if (result != '' || defaultValue != null) confirm();
   }
 
   /// 交互标题内容
@@ -72,7 +72,7 @@ abstract class Prompt extends Console {
 
   /// 通过验证时，更新 [ask] 的状态
   @protected
-  void confim() {
+  void confirm() {
     cursorPosition = Coordinate(cursorPosition!.row, 0);
     stdout.write(green.wrap('✔ '));
   }
