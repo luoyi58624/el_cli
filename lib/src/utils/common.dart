@@ -34,18 +34,3 @@ Directory createDir(String projectName) {
 
   return dir;
 }
-
-String? getString(String title, [String? defaultValue]) {
-  String msg = title;
-  if (defaultValue != null) msg += ' ($defaultValue)';
-  console.write('$msg ');
-  return console.readLine();
-}
-
-bool getBool(String title, [bool defaultValue = true]) {
-  console.write('$title (${defaultValue ? 'Y/n' : 'N/y'}) ');
-  final result = console.readLine();
-  if (result == 'y' || result == 'Y' || result == 'yes' || result == 'YES') return true;
-  if (result == 'n' || result == 'N' || result == 'no' || result == 'NO') return false;
-  return defaultValue;
-}
