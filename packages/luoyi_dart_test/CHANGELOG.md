@@ -1,3 +1,7 @@
+## 2.3.0
+
+ - **FEAT**: 更新 dart_test.
+
 ## 2.2.0
 
  - **FEAT**: 添加 dart test 库.

@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`luoyi_dart_test` - `v2.3.0`](#luoyi_dart_test---v230)
+
+---
+
+#### `luoyi_dart_test` - `v2.3.0`
+
+ - **FEAT**: 更新 dart_test.
+
+
+## 2026-03-11
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`luoyi_dart_test` - `v2.2.0`](#luoyi_dart_test---v220)
 
 ---
