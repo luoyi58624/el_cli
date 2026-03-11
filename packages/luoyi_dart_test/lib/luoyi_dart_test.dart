@@ -1,3 +1,5 @@
-int calculate() {
-  return 6 * 7;
+library;
+
+void hello(){
+  print('hello');
 }
