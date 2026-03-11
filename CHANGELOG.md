@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`el_cli` - `v0.0.18+1`](#el_cli---v00181)
+
+---
+
+#### `el_cli` - `v0.0.18+1`
+
+ - **FIX**: 修复 Prompt 错别字.
+
+
+## 2026-03-11
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`el_cli` - `v0.0.18`](#el_cli---v0018)
 
 ---
